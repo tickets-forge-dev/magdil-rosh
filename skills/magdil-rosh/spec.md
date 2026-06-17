@@ -21,11 +21,11 @@ A spec people can't act on, or that hides the hard parts, is the most expensive 
 - [ ] **Open questions** — list them, don't paper over (assign owner if possible)
 - [ ] **Who's affected** — roles/personas/segments, including the ones easy to forget
 
-## Walter specifics
-- [ ] Roles: family, caregiver, agency admin — does each have its own flow?
-- [ ] US + Canada (en/fr-CA); CASL/HIPAA implications called out
-- [ ] Two-env (demo memory + real Firestore) impact
-- [ ] References the existing prototype/design where UI is involved
+## Project-specific (adapt)
+- [ ] Distinct user roles/personas — does each have its own flow?
+- [ ] Markets/locales (e.g. en, fr-CA); any legal regime (HIPAA/GDPR/CASL) called out
+- [ ] If you run demo + real backends, the impact on both
+- [ ] References the existing prototype/design system where UI is involved
 
 ## Quality
 - [ ] Concrete, not aspirational; no "etc." hiding undefined behavior

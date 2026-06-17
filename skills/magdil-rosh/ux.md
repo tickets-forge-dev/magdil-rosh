@@ -37,7 +37,7 @@ Read for ANY feature with a UI, alongside `universal.md`. `universal.md` = does 
 ## Microcopy
 - [ ] Human, specific copy — errors say what to DO ("Check your card number"), not "Error 402"
 - [ ] No jargon/internal codes leaked to user
-- [ ] Tone consistent (Walter: warm, caregiver-facing — not corporate cold)
+- [ ] Tone consistent with the product's established voice
 
 ## Touch & input ergonomics
 - [ ] Touch targets ≥44px; spacing so fat-fingers don't mis-tap
@@ -56,4 +56,4 @@ Read for ANY feature with a UI, alongside `universal.md`. `universal.md` = does 
 - [ ] Used it keyboard-only?
 - [ ] Used it with slow 3G throttle — do the loading states hold up?
 - [ ] Every button: pressed → something visibly happens?
-- [ ] Matches the existing prototype/design system (Walter design rule)?
+- [ ] Matches the existing prototype/design system?

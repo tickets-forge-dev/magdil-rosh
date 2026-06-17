@@ -29,10 +29,10 @@ A migration that isn't re-runnable, has no dry-run, and no rollback is how you c
 - [ ] Time estimate; downtime window communicated if needed
 - [ ] Rate-limit external calls; retry with backoff
 
-## Walter specifics
-- [ ] **Two-env**: demo (in-memory) AND real (Firestore) — which target, and Firestore rules/indexes unaffected?
-- [ ] HIPAA: no PHI in logs; encryption preserved; access scoped
-- [ ] Canada data residency (walter-care-ca / Montréal) — don't move data across regions
+## Project-specific (adapt)
+- [ ] Multiple backends (e.g. demo + real)? — which target, and are DB rules/indexes unaffected?
+- [ ] Regulated data (HIPAA/GDPR): no PII/PHI in logs; encryption preserved; access scoped
+- [ ] Data residency — don't move data across regions if residency is required
 
 ## Before you say done
 - [ ] Dry-run output reviewed by a human

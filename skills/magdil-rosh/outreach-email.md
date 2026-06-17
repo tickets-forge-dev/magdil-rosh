@@ -5,7 +5,7 @@ Read `email.md` too for the rendering/deliverability mechanics. This = the campa
 ## Ask first
 - Audience + segment? (one list or split by role/region/stage)
 - One email or a **sequence** (follow-ups)? How many touches?
-- Market? (Walter: **Canada = CASL, express consent + teeth**; US = CAN-SPAM)
+- Market? (**Canada = CASL, express consent**; US = CAN-SPAM; EU = GDPR)
 
 ## Campaign structure
 - [ ] **Segmentation** — don't send one generic blast; split by persona/region/stage
@@ -34,6 +34,6 @@ Read `email.md` too for the rendering/deliverability mechanics. This = the campa
 - [ ] List hygiene: dedupe, validate, remove role/invalid addresses pre-send
 - [ ] Test send to self + spam-score tool before launch
 
-## Walter specifics
-- [ ] CASL holds Canada outreach — confirm consent basis before any CA send
-- [ ] Assets live in `outreach/`; reuse existing templates/positioning (moat story)
+## Project-specific (adapt)
+- [ ] If sending to Canada, confirm CASL consent basis before any send
+- [ ] Reuse existing templates/positioning rather than reinventing voice

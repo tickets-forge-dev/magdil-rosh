@@ -33,7 +33,7 @@ Read `universal.md` too.
 - [ ] Generate thumbnails/resizes async; strip metadata
 - [ ] Authz: who can read this file; signed/expiring URLs for private
 - [ ] Quota per user; orphan cleanup when record deleted
-- [ ] Walter HIPAA: encrypt at rest, no PHI in filenames/logs
+- [ ] Regulated data (HIPAA/GDPR): encrypt at rest, no PII/PHI in filenames/logs
 
 ## Tests
 - [ ] Valid upload, oversized, wrong type, corrupt, network failure, authz denial

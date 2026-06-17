@@ -43,7 +43,7 @@ Read `universal.md` too.
 - [ ] CSRF on submit; authz (user edits only own profile)
 - [ ] Public contact form: **honeypot + CAPTCHA/Turnstile + server rate limit**
 - [ ] Email-header-injection prevention on contact backend
-- [ ] No logging of sensitive form data (Walter HIPAA)
+- [ ] No logging of sensitive form data (PII/PHI)
 
 ## Backend & tests
 - [ ] Endpoint returns structured field errors + success payload

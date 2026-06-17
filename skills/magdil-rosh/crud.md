@@ -40,7 +40,7 @@ Read `universal.md` + `forms.md` (create/edit forms) too.
 - [ ] Server validation; consistent error shape mapped to fields
 - [ ] Create idempotency; uniqueness constraints + conflict UX (409)
 - [ ] Pagination: cursor or offset, default page size + max cap
-- [ ] **Walter two-env**: implement in-memory (demo) AND Firestore (real); update Firestore security rules to match server authz
+- [ ] **If you run demo + real backends**: implement both; keep DB security rules in sync with server authz
 
 ## Cross-cutting
 - [ ] Audit: createdBy/updatedBy/timestamps; who deleted

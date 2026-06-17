@@ -82,8 +82,8 @@ Only `SKILL.md` loads on trigger; each domain file loads **on demand**, so the t
 
 ## Extending
 
-Hit a feature with no matching domain? Build it thoroughly, then capture the gap as a new `<domain>.md` — see `magdil-rosh/adding-domains.md`. Best source for the checklist: run the request past a fresh agent with no checklist, diff its plan against complete — the diff is what gets forgotten.
+Hit a feature with no matching domain? Build it thoroughly, then capture the gap as a new `<domain>.md` — see `skills/magdil-rosh/adding-domains.md`. Best source for the checklist: run the request past a fresh agent with no checklist, diff its plan against complete — the diff is what gets forgotten.
 
-## Built for WalterCare
+## Adapt to your project
 
-Domain files carry WalterCare-specific rows inline (two-env demo+Firestore, HIPAA no-PHI-logging, US+Canada en/fr-CA, CASL for Canada outreach, design-prototype-first). Strip or adapt these for other projects.
+Several domain files end with a **"Project-specific (adapt)"** section — generic placeholders for things only your codebase knows: multiple backends to keep in sync, regulated-data logging rules (HIPAA/GDPR/PCI), your locales, your design system. Edit those rows to match your stack, or delete them.

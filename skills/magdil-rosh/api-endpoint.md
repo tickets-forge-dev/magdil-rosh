@@ -29,7 +29,7 @@ Read `universal.md` too.
 - [ ] Timeouts on downstream calls; retries with backoff + circuit-break
 - [ ] Structured logging (request id, no secrets/PII); metrics + alerting on error spikes
 - [ ] N+1 / unbounded query guards; index the filtered columns
-- [ ] Walter: two-env (memory + Firestore) + Firestore rules mirror server authz; HIPAA — no PHI in logs
+- [ ] If you run demo + real backends, keep DB rules in sync with server authz; regulated data — no PII/PHI in logs
 
 ## Tests
 - [ ] Happy path, each error status, authz denial, validation failure, rate limit

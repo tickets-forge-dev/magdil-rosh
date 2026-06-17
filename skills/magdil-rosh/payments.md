@@ -5,7 +5,7 @@ Read `universal.md` + `forms.md` (card form) too. Money bugs are the most expens
 ## Ask first
 - Provider? (Stripe / etc.) — dictates tokens, webhooks, SCA handling
 - One-time charge or subscription/recurring?
-- Markets/currencies + tax? (Walter: US + Canada → GST/HST/PST)
+- Markets/currencies + tax? (e.g. US sales tax, Canada GST/HST/PST, EU VAT)
 
 ## Core safety (non-negotiable)
 - [ ] **Never trust a client-sent amount** — compute/verify price server-side
@@ -40,7 +40,7 @@ Read `universal.md` + `forms.md` (card form) too. Money bugs are the most expens
 - [ ] Refunds: full + partial; reflect in records + notify user
 - [ ] Disputes/chargebacks: webhook + internal alert
 - [ ] **Audit log every money event** (who/what/when/amount); immutable
-- [ ] Walter HIPAA: keep payment data separate from PHI; no card/PII in logs
+- [ ] Keep payment data isolated from other PII/PHI; no card/PII in logs
 
 ## Tests
 - [ ] Success, decline, SCA, duplicate webhook, idempotent retry, refund, failed renewal, signature-forgery rejection

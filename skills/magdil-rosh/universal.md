@@ -27,7 +27,7 @@ Applies to *every* feature regardless of domain. These are the rows skipped most
 ## Input handling
 - [ ] Trim whitespace; reject whitespace-only as empty
 - [ ] Very long input — truncate/wrap, don't break layout
-- [ ] Unicode / emoji / accents (Walter: fr-CA) — UTF-8 safe
+- [ ] Unicode / emoji / accents (e.g. fr-CA é/à, ü, 日本語) — UTF-8 safe
 - [ ] Paste of formatted/huge content
 - [ ] Escape all user content on render (XSS); never trust client input on server
 
@@ -45,9 +45,9 @@ Applies to *every* feature regardless of domain. These are the rows skipped most
 - [ ] Scope queries to the user's tenant/org (no reading others' data)
 - [ ] CSRF protection on cookie-auth mutations
 - [ ] Rate limit sensitive endpoints
-- [ ] **Walter: HIPAA** — never log PII/PHI; encrypt sensitive data at rest
+- [ ] **Regulated data (HIPAA/GDPR/PCI)** — never log PII/PHI; encrypt sensitive data at rest
 
-## i18n & locale (Walter is US + Canada, en + fr-CA)
+## i18n & locale
 - [ ] Strings externalized, not hardcoded
 - [ ] Timezone-correct display of dates/times
 - [ ] Locale-aware number/phone/date formats
@@ -55,4 +55,4 @@ Applies to *every* feature regardless of domain. These are the rows skipped most
 ## Observability & tests
 - [ ] Log success/failure (without secrets/PII); analytics event for the key action
 - [ ] Tests: happy path **+ at least one failure path**
-- [ ] Match the existing HTML prototype before building UI (Walter design rule)
+- [ ] Match the existing design system / prototype before building UI

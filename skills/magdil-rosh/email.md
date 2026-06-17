@@ -4,7 +4,7 @@ Read `universal.md` too. The classic miss: building only the desktop HTML, no mo
 
 ## Ask first
 - Which recipients/roles? (different copy + CTA per role)
-- Locales? (Walter: en-US, en-CA, fr-CA — accents must encode)
+- Locales? (e.g. en, fr-CA — accents must encode)
 - Transactional or marketing? (changes compliance + unsubscribe rules)
 
 ## Variants (don't ship one)

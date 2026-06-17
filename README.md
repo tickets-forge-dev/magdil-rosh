@@ -6,6 +6,8 @@
 
 <p align="center"><b>מגדיל ראש</b> — <i>do more than the literal ask.</i></p>
 
+<p align="center"><b>You ask for a feature. It builds the whole feature</b> — every state, edge case, and error path you'd have asked for anyway — <b>not just the happy path.</b></p>
+
 <p align="center">
   <a href="https://github.com/tickets-forge-dev/magdil-rosh"><img alt="license" src="https://img.shields.io/badge/license-MIT-ff6a2b"></a>
   <img alt="claude code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-5ee08a">

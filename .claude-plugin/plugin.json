@@ -5,9 +5,9 @@
   "description": "מגדיל ראש — do more than the literal ask. Ships the complete feature, not the happy path: edge-case checklists per domain, asks the right scoping questions first, reports terse.",
   "author": {
     "name": "Idan Ayalon",
-    "url": "https://github.com/waltercaregivers-app"
+    "url": "https://github.com/tickets-forge-dev"
   },
-  "homepage": "https://github.com/waltercaregivers-app/magdil-rosh",
+  "homepage": "https://github.com/tickets-forge-dev/magdil-rosh",
   "license": "MIT",
   "keywords": ["skill", "edge-cases", "code-quality", "checklist", "claude-code", "completeness"]
 }

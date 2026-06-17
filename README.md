@@ -25,7 +25,7 @@ It deliberately **skips** trivial work (questions, lookups, one-line edits) so i
 In Claude Code, run:
 
 ```
-/plugin marketplace add waltercaregivers-app/magdil-rosh
+/plugin marketplace add tickets-forge-dev/magdil-rosh
 /plugin install magdil-rosh
 ```
 
@@ -34,7 +34,7 @@ One command, versioned, updatable. Restart the session and the skill is live.
 ### Manual — copy the skill folder
 
 ```bash
-git clone https://github.com/waltercaregivers-app/magdil-rosh.git
+git clone https://github.com/tickets-forge-dev/magdil-rosh.git
 
 # personal (all your projects)
 cp -r magdil-rosh/skills/magdil-rosh ~/.claude/skills/

@@ -4,7 +4,7 @@
   "description": "מגדיל ראש — a Claude Code skill that ships the complete deliverable instead of the happy path.",
   "owner": {
     "name": "Idan Ayalon",
-    "url": "https://github.com/waltercaregivers-app"
+    "url": "https://github.com/tickets-forge-dev"
   },
   "plugins": [
     {

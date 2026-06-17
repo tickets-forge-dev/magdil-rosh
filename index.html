@@ -170,7 +170,7 @@
       <a href="#diff">before / after</a>
       <a href="#how">how</a>
       <a href="#install">install</a>
-      <a class="gh" href="https://github.com/waltercaregivers-app/magdil-rosh" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="gh" href="https://github.com/tickets-forge-dev/magdil-rosh" target="_blank" rel="noopener">GitHub ↗</a>
     </span>
   </nav>
 </div>
@@ -311,7 +311,7 @@
     <div class="install reveal">
       <div class="bar"><span>claude code</span><button class="copy" id="copyBtn">copy</button></div>
 <pre id="cmd"><span class="c"># in Claude Code:</span>
-<span class="p">/plugin</span> marketplace add waltercaregivers-app/magdil-rosh
+<span class="p">/plugin</span> marketplace add tickets-forge-dev/magdil-rosh
 <span class="p">/plugin</span> install magdil-rosh
 
 <span class="c"># restart the session — then ask Claude to build something</span>
@@ -319,8 +319,8 @@
     </div>
     <p class="lead" style="margin:18px 0 0;font-size:13px">Prefer manual? <span class="faint">git clone, then</span> <code style="color:var(--ink)">cp -r magdil-rosh/skills/magdil-rosh ~/.claude/skills/</code></p>
     <div class="cta" style="justify-content:flex-start;margin-top:26px">
-      <a class="btn primary" href="https://github.com/waltercaregivers-app/magdil-rosh" target="_blank" rel="noopener">Star on GitHub ★</a>
-      <a class="btn" href="https://github.com/waltercaregivers-app/magdil-rosh" target="_blank" rel="noopener">Read the source</a>
+      <a class="btn primary" href="https://github.com/tickets-forge-dev/magdil-rosh" target="_blank" rel="noopener">Star on GitHub ★</a>
+      <a class="btn" href="https://github.com/tickets-forge-dev/magdil-rosh" target="_blank" rel="noopener">Read the source</a>
     </div>
   </div>
 </section>
@@ -329,7 +329,7 @@
   <div class="wrap">
     <div class="heb-s">מגדיל ראש</div>
     <p style="margin-top:8px">do more than the literal ask · MIT licensed · built with Claude Code</p>
-    <p style="margin-top:8px"><a href="#pain">the pain</a> · <a href="#diff">before/after</a> · <a href="#install">install</a> · <a href="https://github.com/waltercaregivers-app/magdil-rosh" target="_blank" rel="noopener">GitHub ↗</a></p>
+    <p style="margin-top:8px"><a href="#pain">the pain</a> · <a href="#diff">before/after</a> · <a href="#install">install</a> · <a href="https://github.com/tickets-forge-dev/magdil-rosh" target="_blank" rel="noopener">GitHub ↗</a></p>
   </div>
 </footer>
 
@@ -337,7 +337,7 @@
   // copy install command
   const btn=document.getElementById('copyBtn');
   btn.addEventListener('click',()=>{
-    const txt=`/plugin marketplace add waltercaregivers-app/magdil-rosh\n/plugin install magdil-rosh`;
+    const txt=`/plugin marketplace add tickets-forge-dev/magdil-rosh\n/plugin install magdil-rosh`;
     navigator.clipboard.writeText(txt).then(()=>{
       btn.textContent='copied ✓';btn.classList.add('done');
       setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done');},1800);

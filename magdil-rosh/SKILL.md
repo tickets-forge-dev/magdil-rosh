@@ -1,72 +1,64 @@
 ---
 name: magdil-rosh
-description: Use when building, implementing, extending, or "quickly adding" any feature — auth/login/OAuth, email templates, forms, lists/tables/CRUD, file upload, search/filter, payments, API endpoints, real-time, modals — to cover the states, error paths, and edge cases that get silently skipped under a short request. Trigger on "add X", "build X", "create X", "make a X" for any of these.
+description: Use when producing any non-trivial deliverable you ship — a feature (auth, email, forms, CRUD, upload, search, payments, API, real-time, modals), a spec/PRD/story, an outreach/marketing campaign, or a data script/migration. Triggers on build/create/add/write/draft/implement X. Skip for questions, lookups, explanations, one-line edits, chat.
 ---
 
 # magdil-rosh
 
-מגדיל ראש — do more than the literal ask. A short request ("add Google login", "make a welcome email") is NOT a request for the minimal version. The user wants the *complete, production* version. The knowledge of what's complete already exists — this skill is the forcing function that makes you apply it instead of shipping the happy path.
+מגדיל ראש — do more than the literal ask. A short request ("add Google login", "write the welcome email", "draft the outreach", "migrate the table") is NOT a request for the minimal version. The knowledge of what "complete" means already exists — this skill is the forcing function that makes you apply it instead of shipping the happy path.
 
 ## Core principle
 
-**The literal request is the floor, not the ceiling.** "Add a contact form" means add a contact form *with* its empty/loading/error/success states, validation, double-submit guard, mobile layout, and a11y — because a form without those is broken, not minimal.
+**The literal request is the floor, not the ceiling.** Ship the thing *with* the states, cases, and failure paths that make it actually usable. A form without empty/error/mobile states is broken, not minimal. A spec without acceptance criteria is a wish.
 
-A feature is done when every row of its domain checklist is either **covered** or **consciously deferred with the user told**. Silently skipping a row = bug.
+Done = every checklist row is **covered** or **consciously deferred with the user told**. Silent skip = bug.
+
+## When NOT to use
+
+Skip for: answering a question, a lookup, explaining code, a one-line/mechanical edit, chat. Rule of thumb: if skipping an edge case would be a *bug or an embarrassment*, the skill applies — otherwise don't burn the ceremony.
 
 ## Workflow
 
-1. **Identify domains.** Match the request to one or more files below. Most features hit `universal.md` + one domain file.
-2. **Load the checklists.** Read `universal.md` (always), `ux.md` (any UI feature), + each matching domain file. These are not loaded until now — read them.
-3. **Ask great questions FIRST** (see below). Block coding on the answers that change the build.
-4. **Build covering every row.** Cover it or defer it — no silent gaps.
-5. **Report terse** (see Communication). One line: covered / deferred / questions.
-
-## Ask great questions
-
-Before building, ask only the questions whose answers **change what you build**. Use the AskUserQuestion tool. Rules:
-
-- **Max 3 questions.** If you have more, you're asking things you should default.
-- **Never ask what you can default.** "Should the button be blue?" — pick and move. Ask only forks: which auth providers, soft vs hard delete, who can see this, which locales.
-- **Offer a recommended option first**, marked `(recommended)`, so the user can one-click.
-- **Surface the expensive forks**: anything that's hard to reverse later (data model, auth model, delete semantics, multi-tenancy scope).
-- **A defaulted decision is still a decision** — state it in the report, don't bury it.
-
-Bad: "What do you want?" Good: "Link Google to an existing email/password account automatically, or require explicit confirmation? (takeover risk if auto)"
-
-## Communication — terse, like caveman
-
-Output is to-the-point. No preamble, no "I'd be happy to", no restating the request.
-
-- Report = checklist receipt. Group: ✅ covered, ⏭️ deferred (why), ❓ open.
-- One line per item. Fragments OK. Drop articles/filler.
-- Code, commit messages, security warnings: write normal full prose.
-- Don't narrate what you're about to do — do it, then give the receipt.
+1. **Match domains** (tables below). Feature → `universal.md` + (`ux.md` if UI) + domain file. Other deliverable → its domain file only.
+2. **Read the matching files now** — not yet in context.
+3. **Ask ≤3 sharp questions first** — only forks that change the build. Recommended option first (`(recommended)`). Surface irreversible forks (data model, auth, delete semantics, tenancy, legal: CASL/HIPAA). Default the rest and say so. Never "What do you want?".
+4. **Produce covering every row** — cover or defer, no silent gaps.
+5. **Report terse**: no preamble, fragments OK, one line each → ✅ covered / ⏭️ deferred (why) / ❓ open. (Code, commits, security warnings: full prose.)
 
 ## Domains
 
-| Request looks like | Read |
+Features (code) — read `universal.md` always, `ux.md` for any UI:
+
+| Looks like | Read |
 |---|---|
-| *any* feature | `universal.md` (always) |
-| *any* feature with a UI | `ux.md` (feel/polish, not just function) |
-| login, signup, OAuth/Google, password reset, sessions, logout | `auth.md` |
-| email template, welcome/transactional email, notification | `email.md` |
-| form, contact form, profile edit, settings, input | `forms.md` |
-| list, table, CRUD, create/edit/delete, dashboard grid | `crud.md` |
+| login, signup, OAuth/Google, reset, sessions, logout | `auth.md` |
+| email template, welcome/transactional, notification | `email.md` |
+| form, contact, profile edit, settings, input | `forms.md` |
+| list, table, CRUD, dashboard grid | `crud.md` |
 | upload, avatar, image, file, attachment | `file-upload.md` |
 | search, filter, autocomplete, typeahead | `search-filter.md` |
 | payment, checkout, billing, subscription | `payments.md` |
 | API endpoint, route, backend handler | `api-endpoint.md` |
-| websocket, live, real-time, presence, notifications feed | `realtime.md` |
+| websocket, live, real-time, presence | `realtime.md` |
 | modal, dialog, drawer, popup, confirm | `modal-dialog.md` |
 
-No file matches the feature? Use `universal.md`, build thoroughly, then add a new domain file (see `adding-domains.md`).
+Other deliverables (domain file only, no universal/ux):
 
-## Red flags — you are about to ship the happy path
+| Looks like | Read |
+|---|---|
+| spec, PRD, story, requirements, design doc | `spec.md` |
+| outreach, cold email, marketing campaign, sequence | `outreach-email.md` |
+| data script, migration, backfill, import/export | `data-migration.md` |
 
-- "I'll just wire up the basic version first" → the states ARE the version
-- "They didn't mention mobile" → mobile is not optional, it's half the users
-- "Error handling can come later" → later never comes; cover it now or defer out loud
-- "It's just a simple form/email/list" → simple features have the same checklist
-- "Desktop looks fine" → did you check 375px wide?
+No match? Build thoroughly, then add a file (`adding-domains.md`).
 
-All of these mean: open the domain file, walk every row.
+## Red flags — about to ship the happy path
+
+- "basic version first" → the states ARE the version
+- "they didn't mention mobile" → mobile is half the users
+- "error handling later" → cover now or defer out loud
+- "it's just a simple X" → simple things have the same checklist
+- "desktop looks fine" → checked 375px?
+- "spec covers the main flow" → where are error states + out-of-scope?
+
+→ open the domain file, walk every row.

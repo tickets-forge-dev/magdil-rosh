@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "magdil-rosh",
+  "description": "מגדיל ראש — a Claude Code skill that ships the complete deliverable instead of the happy path.",
+  "owner": {
+    "name": "Idan Ayalon",
+    "url": "https://github.com/waltercaregivers-app"
+  },
+  "plugins": [
+    {
+      "name": "magdil-rosh",
+      "description": "Do more than the literal ask. Edge-case checklists per domain (auth, email, forms, CRUD, payments, migrations…), asks the right scoping questions first, reports terse.",
+      "source": "./",
+      "category": "productivity",
+      "license": "MIT"
+    }
+  ]
+}

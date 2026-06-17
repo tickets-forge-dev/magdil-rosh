@@ -20,36 +20,50 @@ It deliberately **skips** trivial work (questions, lookups, one-line edits) so i
 
 ## Install
 
-Clone the repo, then copy the `magdil-rosh/` skill folder into your Claude Code skills directory:
+### Recommended — as a Claude Code plugin
+
+In Claude Code, run:
+
+```
+/plugin marketplace add waltercaregivers-app/magdil-rosh
+/plugin install magdil-rosh
+```
+
+One command, versioned, updatable. Restart the session and the skill is live.
+
+### Manual — copy the skill folder
 
 ```bash
 git clone https://github.com/waltercaregivers-app/magdil-rosh.git
 
 # personal (all your projects)
-cp -r magdil-rosh/magdil-rosh ~/.claude/skills/
+cp -r magdil-rosh/skills/magdil-rosh ~/.claude/skills/
 
 # or cross-runtime
-cp -r magdil-rosh/magdil-rosh ~/.agents/skills/
-
-# or per-project
-cp -r magdil-rosh/magdil-rosh /path/to/project/.claude/skills/
+cp -r magdil-rosh/skills/magdil-rosh ~/.agents/skills/
 ```
 
-It loads automatically — Claude triggers it from the `description` when a request matches. No API key, no config.
+Either way it loads automatically — Claude triggers it from the `description` when a request matches. No API key, no config.
 
-> The repo root holds the landing page + docs; the skill itself is the nested `magdil-rosh/` folder. That's the one Claude loads.
+> The repo root holds the landing page, plugin manifests, and docs; the skill itself lives in `skills/magdil-rosh/`.
 
 ## Structure
 
 ```
-magdil-rosh/
-├── SKILL.md            # router + core behaviors (loads on trigger)
-├── universal.md        # cross-cutting rows every feature forgets (states, a11y, mobile, security)
-├── ux.md               # UI/UX polish layer (feel, not just function)
-├── auth.md  email.md  forms.md  crud.md  file-upload.md
-├── search-filter.md  payments.md  api-endpoint.md  realtime.md  modal-dialog.md
-├── spec.md  outreach-email.md  data-migration.md   # non-code deliverables
-└── adding-domains.md   # how to extend with new domains
+magdil-rosh/                 # repo root: landing page + plugin manifests
+├── .claude-plugin/
+│   ├── plugin.json          # plugin metadata
+│   └── marketplace.json     # makes `/plugin marketplace add` work
+├── index.html               # landing page
+└── skills/
+    └── magdil-rosh/         # ← the skill Claude loads
+        ├── SKILL.md          # router + core behaviors (loads on trigger)
+        ├── universal.md      # cross-cutting rows every feature forgets
+        ├── ux.md             # UI/UX polish layer (feel, not just function)
+        ├── auth.md  email.md  forms.md  crud.md  file-upload.md
+        ├── search-filter.md  payments.md  api-endpoint.md  realtime.md  modal-dialog.md
+        ├── spec.md  outreach-email.md  data-migration.md   # non-code deliverables
+        └── adding-domains.md # how to extend with new domains
 ```
 
 Only `SKILL.md` loads on trigger; each domain file loads **on demand**, so the token cost stays low.

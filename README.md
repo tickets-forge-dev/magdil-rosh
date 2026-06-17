@@ -1,6 +1,16 @@
-# magdil-rosh
+<p align="center">
+  <img src="icon.png" alt="magdil-rosh — a head opening to reveal many watching eyes" width="160">
+</p>
 
-> מגדיל ראש — *do more than the literal ask.*
+<h1 align="center">magdil-rosh</h1>
+
+<p align="center"><b>מגדיל ראש</b> — <i>do more than the literal ask.</i></p>
+
+<p align="center">
+  <a href="https://github.com/tickets-forge-dev/magdil-rosh"><img alt="license" src="https://img.shields.io/badge/license-MIT-ff6a2b"></a>
+  <img alt="claude code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-5ee08a">
+  <a href="https://tickets-forge-dev.github.io/magdil-rosh/"><img alt="landing page" src="https://img.shields.io/badge/landing-page-6cb6ff"></a>
+</p>
 
 A Claude Code skill that fixes the most common failure mode: under a short request ("add Google login", "write the welcome email", "migrate the table"), the agent ships the **happy path** and silently skips the states, edge cases, and failure paths that make a thing actually production-ready.
 

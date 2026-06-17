@@ -14,7 +14,7 @@
   <a href="https://tickets-forge-dev.github.io/magdil-rosh/"><img alt="landing page" src="https://img.shields.io/badge/landing-page-6cb6ff"></a>
 </p>
 
-<p align="center">🔥 by <a href="https://github.com/tickets-forge-dev"><b>Forge</b></a></p>
+<p align="center">🔥 by <a href="https://forge-ai.dev"><b>Forge</b></a> — <i>autonomous AI engineering: tickets in, reviewed production-grade code out.</i></p>
 
 A Claude Code skill that fixes the most common failure mode: under a short request ("add Google login", "write the welcome email", "migrate the table"), the agent ships the **happy path** and silently skips the states, edge cases, and failure paths that make a thing actually production-ready.
 

@@ -12,6 +12,8 @@
   <a href="https://tickets-forge-dev.github.io/magdil-rosh/"><img alt="landing page" src="https://img.shields.io/badge/landing-page-6cb6ff"></a>
 </p>
 
+<p align="center">🔥 by <a href="https://github.com/tickets-forge-dev"><b>Forge</b></a></p>
+
 A Claude Code skill that fixes the most common failure mode: under a short request ("add Google login", "write the welcome email", "migrate the table"), the agent ships the **happy path** and silently skips the states, edge cases, and failure paths that make a thing actually production-ready.
 
 The knowledge of what "complete" means already exists in the model. This skill is the **forcing function** that makes it apply that knowledge instead of cutting corners — and that asks the right scoping questions *before* building, then reports tersely.

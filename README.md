@@ -20,20 +20,24 @@ It deliberately **skips** trivial work (questions, lookups, one-line edits) so i
 
 ## Install
 
-Copy the skill folder into your Claude Code skills directory:
+Clone the repo, then copy the `magdil-rosh/` skill folder into your Claude Code skills directory:
 
 ```bash
-# personal (all projects)
-cp -r magdil-rosh ~/.claude/skills/
+git clone https://github.com/waltercaregivers-app/magdil-rosh.git
+
+# personal (all your projects)
+cp -r magdil-rosh/magdil-rosh ~/.claude/skills/
 
 # or cross-runtime
-cp -r magdil-rosh ~/.agents/skills/
+cp -r magdil-rosh/magdil-rosh ~/.agents/skills/
 
 # or per-project
-cp -r magdil-rosh /path/to/project/.claude/skills/
+cp -r magdil-rosh/magdil-rosh /path/to/project/.claude/skills/
 ```
 
-It loads automatically — Claude triggers it from the `description` when a request matches.
+It loads automatically — Claude triggers it from the `description` when a request matches. No API key, no config.
+
+> The repo root holds the landing page + docs; the skill itself is the nested `magdil-rosh/` folder. That's the one Claude loads.
 
 ## Structure
 

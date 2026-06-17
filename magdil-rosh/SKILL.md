@@ -1,6 +1,6 @@
 ---
 name: magdil-rosh
-description: Use when producing any non-trivial deliverable you ship — a feature (auth, email, forms, CRUD, upload, search, payments, API, real-time, modals), a spec/PRD/story, an outreach/marketing campaign, or a data script/migration. Triggers on build/create/add/write/draft/implement X. Skip for questions, lookups, explanations, one-line edits, chat.
+description: Use when producing any non-trivial deliverable you ship — a feature (auth, email, forms, CRUD, upload, search, payments, API, real-time, modals), a spec/PRD/story, an outreach/marketing campaign, or a data script/migration — to cover the states, edge cases, and failure paths that get silently skipped under a short request. Triggers on build/create/add/write/draft/implement X where X is something shipped. Skip for questions, lookups, explanations, one-line/mechanical edits, chat.
 ---
 
 # magdil-rosh
